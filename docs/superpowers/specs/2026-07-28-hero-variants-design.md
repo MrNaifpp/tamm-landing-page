@@ -52,6 +52,12 @@ is the one to send first; the desktop set is for anyone reviewing on a laptop.
 > renumbered ١–٣). The gold frame, precision grid and diagonal split were dropped. Delivery
 > changed from screenshots-only to publishing `hero-options.html` on tammgroup.sa (noindex,
 > unlisted) so the owner can browse the options himself. More variants may be added later.
+>
+> **Amendment 2 (2026-07-28):** Three creative variants added — ٤ المسرح الذهبي (CSS/SVG
+> trophy under a spotlight cone with a sweeping glint), ٥ الزجاج التفاعلي (frosted-glass card
+> over color orbs, 3D pointer tilt with specular sheen; idle drift on touch), ٦ سماء التميز
+> (interactive constellation canvas, pauses when its panel is hidden). Two intermediate ٥
+> concepts (engraved plaque, kinetic type marquee) were built and rejected during review.
 
 ## The six variants
 
