@@ -47,6 +47,12 @@ Screenshots are the actual deliverable to the owner: six desktop captures at 144
 six mobile captures at 390×844. He will most likely view them on a phone, so the mobile set
 is the one to send first; the desktop set is for anyone reviewing on a laptop.
 
+> **Amendment (2026-07-28):** After a first pass, the set was narrowed to three variants —
+> the Islamic tessellation, the minimal editorial, and the category tiles (originally ٢, ٥, ٦;
+> renumbered ١–٣). The gold frame, precision grid and diagonal split were dropped. Delivery
+> changed from screenshots-only to publishing `hero-options.html` on tammgroup.sa (noindex,
+> unlisted) so the owner can browse the options himself. More variants may be added later.
+
 ## The six variants
 
 Shared across all of them: `min-h-screen`, the existing nav overlaid, the same primary CTA

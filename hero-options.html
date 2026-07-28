@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>تـم | معاينة خيارات الواجهة الرئيسية</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@500;600;700;800;900&family=Cairo:wght@300;400;500;600;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS v3 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#08296C',
+                            50: '#E8EDF5', 100: '#C5D0E8', 200: '#8FA1D1', 300: '#5972BA',
+                            400: '#2D4A93', 500: '#08296C', 600: '#062156', 700: '#051941',
+                            800: '#03102B', 900: '#020816',
+                        },
+                        teal: {
+                            DEFAULT: '#45C0BE',
+                            50: '#EDF9F9', 100: '#D4F1F0', 200: '#A9E3E2', 300: '#7ED5D3',
+                            400: '#53C7C5', 500: '#45C0BE', 600: '#379A98', 700: '#2A7372',
+                            800: '#1C4D4C', 900: '#0E2626',
+                        },
+                        gold: {
+                            DEFAULT: '#C9A84C',
+                            50: '#FBF7EC', 100: '#F3EBCF', 200: '#E7D89F', 300: '#DBC46F',
+                            400: '#CFB15F', 500: '#C9A84C', 600: '#A1863D', 700: '#79652E',
+                            800: '#50431E', 900: '#28220F',
+                        },
+                        orange: {
+                            DEFAULT: '#E89B3C', glow: '#F2B65C', soft: '#F5C77E', deep: '#C57A22',
+                        },
+                        brand: { black: '#080300', gray: '#dcddde' }
+                    },
+                    fontFamily: {
+                        kufam: ['Kufam', 'sans-serif'],
+                        cairo: ['Cairo', 'sans-serif'],
+                        ruqaa: ['Aref Ruqaa', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Cairo', sans-serif; background-color: #020816; }
+
+        /* ===== Shared entry motion ===== */
+        @keyframes riseIn {
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: none; }
+        }
+        .reveal   { animation: riseIn .8s cubic-bezier(.22,1,.36,1) both; }
+        .reveal-1 { animation-delay: .08s; }
+        .reveal-2 { animation-delay: .18s; }
+        .reveal-3 { animation-delay: .28s; }
+        .reveal-4 { animation-delay: .38s; }
+
+        @keyframes shimmer {
+            0%   { background-position: -200% center; }
+            100% { background-position:  200% center; }
+        }
+        .gold-shimmer {
+            background: linear-gradient(90deg, #C9A84C 0%, #E7D89F 30%, #C9A84C 60%, #E7D89F 80%, #C9A84C 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 4s linear infinite;
+        }
+
+        /* ===== Carousel (option ١) ===== */
+        .cstage { position: relative; width: 100%; height: 100%; overflow: hidden; }
+        .cmode-fade .cslide {
+            position: absolute; inset: 0;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; transform: translateY(12px);
+            transition: opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1);
+            pointer-events: none;
+        }
+        .cmode-fade .cslide.is-active { opacity: 1; transform: none; pointer-events: auto; }
+
+        .cdot {
+            width: 10px; height: 10px; border-radius: 9999px;
+            background: rgba(255,255,255,.3);
+            transition: all .3s ease;
+        }
+        .cdot.is-active { background: #E89B3C; width: 28px; }
+
+        /* ===== Option ١ — Islamic tessellation ===== */
+        .girih-bg {
+            background-color: #03102B;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%2345C0BE' stroke-width='1.2' opacity='0.09'%3E%3Crect x='30' y='30' width='60' height='60'/%3E%3Crect x='30' y='30' width='60' height='60' transform='rotate(45 60 60)'/%3E%3Crect x='-30' y='-30' width='60' height='60'/%3E%3Crect x='-30' y='-30' width='60' height='60' transform='rotate(45 0 0)'/%3E%3Crect x='90' y='-30' width='60' height='60'/%3E%3Crect x='90' y='-30' width='60' height='60' transform='rotate(45 120 0)'/%3E%3Crect x='-30' y='90' width='60' height='60'/%3E%3Crect x='-30' y='90' width='60' height='60' transform='rotate(45 0 120)'/%3E%3Crect x='90' y='90' width='60' height='60'/%3E%3Crect x='90' y='90' width='60' height='60' transform='rotate(45 120 120)'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 120px 120px;
+        }
+
+        /* ===== Option ٢ — scroll cue ===== */
+        @keyframes nudge {
+            0%, 100% { transform: translateY(0);   opacity: .5; }
+            50%      { transform: translateY(8px); opacity: 1;  }
+        }
+        .scroll-cue { animation: nudge 2.2s ease-in-out infinite; }
+
+        /* ===== Chooser bar ===== */
+        .opt-btn {
+            width: 40px; height: 40px; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 15px;
+            color: rgba(255,255,255,.65);
+            background: rgba(255,255,255,.06);
+            border: 1px solid rgba(255,255,255,.12);
+            transition: all .2s ease;
+        }
+        .opt-btn:hover { color: #fff; border-color: rgba(232,155,60,.6); }
+        .opt-btn.is-active {
+            background: #E89B3C; border-color: #E89B3C; color: #020816;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .reveal, .gold-shimmer, .scroll-cue { animation: none !important; }
+            .reveal { opacity: 1; transform: none; }
+            .gold-shimmer { -webkit-text-fill-color: #DBC46F; }
+            .cmode-fade .cslide { transition: none; }
+        }
+    </style>
+</head>
+<body class="bg-navy-900 text-white overflow-x-hidden pt-14">
+
+    <!-- ============================================ -->
+    <!-- CHOOSER BAR — review tool only, not part of the site -->
+    <!-- ============================================ -->
+    <div class="fixed top-0 inset-x-0 h-14 z-[100] bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto h-full px-3 sm:px-6 flex items-center justify-between gap-3">
+            <span class="hidden lg:block font-cairo text-sm text-white/45 whitespace-nowrap">خيارات الواجهة الرئيسية</span>
+
+            <div class="flex items-center gap-1.5 sm:gap-2" id="opt-buttons">
+                <button class="opt-btn is-active" data-opt="1" aria-label="الخيار الأول">١</button>
+                <button class="opt-btn" data-opt="2" aria-label="الخيار الثاني">٢</button>
+                <button class="opt-btn" data-opt="3" aria-label="الخيار الثالث">٣</button>
+            </div>
+
+            <span id="opt-name" class="font-cairo text-sm sm:text-base font-bold text-orange whitespace-nowrap truncate">الزخرفة الإسلامية</span>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- NAVIGATION — sits under the chooser bar -->
+    <!-- ============================================ -->
+    <nav class="fixed top-14 right-0 left-0 z-50 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="flex items-center gap-3 group">
+                    <svg class="h-8 w-auto transition-transform duration-300 group-hover:scale-105" viewBox="0 0 226 52" xmlns="http://www.w3.org/2000/svg">
+                        <g class="fill-white">
+                            <path fill-rule="evenodd" d="M10 0H42C47.5 0 52 4.5 52 10V42C52 47.5 47.5 52 42 52H10C4.5 52 0 47.5 0 42V10C0 4.5 4.5 0 10 0Z M7 51C7 38 4 28 14 20C19 16 24 19 25 26C26 33 20 40 16 45C12 49 9 51 7 51Z M30 51C30 42 32 35 35 31C38 35 39 42 38 51Z M43 7L44 11L48 12L44 13L43 17L42 13L38 12L42 11Z"/>
+                            <path fill-rule="evenodd" d="M68 0H100C105.5 0 110 4.5 110 10V42C110 47.5 105.5 52 100 52H68C62.5 52 58 47.5 58 42V10C58 4.5 62.5 0 68 0Z M77 51C77 38 79 28 84 22C89 28 91 38 91 51Z M94 8L95 12L99 13L95 14L94 18L93 14L89 13L93 12Z"/>
+                            <path fill-rule="evenodd" d="M126 0H158C163.5 0 168 4.5 168 10V42C168 47.5 163.5 52 158 52H126C120.5 52 116 47.5 116 42V10C116 4.5 120.5 0 126 0Z M120 51C120 40 123 32 128 26C133 32 136 40 136 51Z M140 51C140 40 143 32 148 26C153 32 156 40 156 51Z M138 9L139 13L143 14L139 15L138 19L137 15L133 14L137 13Z"/>
+                            <path fill-rule="evenodd" d="M184 0H216C221.5 0 226 4.5 226 10V42C226 47.5 221.5 52 216 52H184C178.5 52 174 47.5 174 42V10C174 4.5 178.5 0 184 0Z M178 51C178 40 181 32 186 26C191 32 194 40 194 51Z M198 51C198 40 201 32 206 26C211 32 214 40 214 51Z M196 9L197 13L201 14L197 15L196 19L195 15L191 14L195 13Z"/>
+                        </g>
+                    </svg>
+                </a>
+
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#about-preview" class="text-white/90 hover:text-orange transition-colors duration-300 font-cairo font-medium">نبذة عنا</a>
+                    <a href="#about-preview" class="text-white/90 hover:text-orange transition-colors duration-300 font-cairo font-medium">الخدمات</a>
+                    <a href="#about-preview" class="text-white/90 hover:text-orange transition-colors duration-300 font-cairo font-medium">الأعمال</a>
+                    <a href="#about-preview" class="text-white/90 hover:text-orange transition-colors duration-300 font-cairo font-medium">ملفات الأعمال</a>
+                    <a href="#about-preview" class="text-white/90 hover:text-orange transition-colors duration-300 font-cairo font-medium">تواصل معنا</a>
+                </div>
+
+                <button class="md:hidden text-white p-2" aria-label="القائمة">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ============================================================ -->
+    <!-- OPTION ١ — الزخرفة الإسلامية (Islamic tessellation) · carousel -->
+    <!-- ============================================================ -->
+    <section data-opt-panel="1" class="relative min-h-[calc(100vh-3.5rem)] overflow-hidden girih-bg">
+        <!-- Centred gold lift behind the type — a vignette, not a streak -->
+        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 60% 45% at 50% 46%, rgba(201,168,76,.13), transparent 70%);"></div>
+
+        <div class="cstage min-h-[calc(100vh-3.5rem)] cmode-fade" data-carousel>
+            <!-- Slide 1 -->
+            <div class="cslide is-active px-6">
+                <div class="text-center max-w-3xl">
+                    <h1 class="font-ruqaa text-white text-3xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+                        تم<span class="text-orange">...</span> لأن الانطباع <span class="gold-shimmer">يدوم</span>
+                    </h1>
+                    <p class="font-cairo text-teal-100 text-base sm:text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
+                        نصمم لحظات التقدير ونصنع الذكريات التي تبقى
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="#about-preview" class="bg-orange hover:bg-orange-glow text-navy-900 px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange/30 hover:-translate-y-0.5 w-full sm:w-auto">اكتشف خدماتنا</a>
+                        <a href="#about-preview" class="border-2 border-white/40 hover:border-orange text-white hover:text-orange px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto">تواصل معنا</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="cslide px-6">
+                <div class="text-center max-w-3xl">
+                    <h1 class="font-ruqaa text-white text-3xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+                        تصاميم <span class="gold-shimmer">فاخرة</span> تليق بإنجازاتكم
+                    </h1>
+                    <p class="font-cairo text-teal-100 text-base sm:text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
+                        دروع تذكارية وكؤوس مخصصة تحاكي الإبداع وتُجسّد التميز
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="#about-preview" class="bg-orange hover:bg-orange-glow text-navy-900 px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange/30 hover:-translate-y-0.5 w-full sm:w-auto">استعرض منتجاتنا</a>
+                        <a href="#about-preview" class="border-2 border-white/40 hover:border-orange text-white hover:text-orange px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto">شركاؤنا</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="cslide px-6">
+                <div class="text-center max-w-3xl">
+                    <h1 class="font-ruqaa text-white text-3xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+                        شركاؤكم في صناعة <span class="text-orange">لحظات التميز</span>
+                    </h1>
+                    <p class="font-cairo text-teal-100 text-base sm:text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
+                        من تصميم الهدايا إلى تنظيم الفعاليات، فريقنا معكم في كل التفاصيل
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="#about-preview" class="bg-orange hover:bg-orange-glow text-navy-900 px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange/30 hover:-translate-y-0.5 w-full sm:w-auto">تعرّف على تم</a>
+                        <a href="#about-preview" class="border-2 border-white/40 hover:border-orange text-white hover:text-orange px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto">خدماتنا الإبداعية</a>
+                    </div>
+                </div>
+            </div>
+
+            <button data-action="prev" aria-label="الشريحة السابقة" class="absolute start-4 sm:start-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-orange/80 border border-white/20 text-white flex items-center justify-center backdrop-blur-sm transition-all duration-300 z-20">
+                <svg class="w-5 h-5 rtl:scale-x-[-1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button data-action="next" aria-label="الشريحة التالية" class="absolute end-4 sm:end-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-orange/80 border border-white/20 text-white flex items-center justify-center backdrop-blur-sm transition-all duration-300 z-20">
+                <svg class="w-5 h-5 rtl:scale-x-[-1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-2 z-20">
+                <button class="cdot is-active" aria-label="الشريحة الأولى"></button>
+                <button class="cdot" aria-label="الشريحة الثانية"></button>
+                <button class="cdot" aria-label="الشريحة الثالثة"></button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================ -->
+    <!-- OPTION ٢ — الحد الأدنى (minimal editorial) · static -->
+    <!-- ============================================================ -->
+    <section data-opt-panel="2" class="hidden relative min-h-[calc(100vh-3.5rem)] flex items-center justify-center px-6 overflow-hidden" style="background:#020816;">
+        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 85% 55% at 50% -10%, rgba(8,41,108,.55), transparent 70%);"></div>
+
+        <div class="relative z-10 text-center max-w-4xl">
+            <span class="inline-block font-cairo text-[10px] sm:text-xs tracking-[0.45em] text-teal-400 mb-8 reveal reveal-1">تـم للهدايا الدعائية</span>
+
+            <h1 class="font-ruqaa text-white text-5xl sm:text-7xl lg:text-8xl font-bold leading-[1.1] reveal reveal-2">
+                لأن الانطباع <span class="gold-shimmer">يدوم</span>
+            </h1>
+
+            <div class="w-24 h-px bg-gold/70 mx-auto my-10 reveal reveal-3"></div>
+
+            <p class="font-cairo text-white/55 text-base sm:text-lg leading-relaxed max-w-lg mx-auto mb-12 reveal reveal-3">
+                نصمم لحظات التقدير ونصنع الذكريات التي تبقى
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center reveal reveal-4">
+                <a href="#about-preview" class="bg-orange hover:bg-orange-glow text-navy-900 px-10 py-4 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange/30 hover:-translate-y-0.5">
+                    اكتشف خدماتنا
+                </a>
+                <a href="#about-preview" class="font-cairo text-white/70 hover:text-orange text-base border-b border-white/25 hover:border-orange pb-1 transition-colors duration-300">
+                    تواصل معنا
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 scroll-cue" aria-hidden="true">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+
+    <!-- ============================================================ -->
+    <!-- OPTION ٣ — بطاقات الفئات (category tiles) · static -->
+    <!-- ============================================================ -->
+    <section data-opt-panel="3" class="hidden relative min-h-[calc(100vh-3.5rem)] flex items-center overflow-hidden py-28" style="background:#051941;">
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+                <!-- Message -->
+                <div class="text-center lg:text-start">
+                    <h1 class="font-ruqaa text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 reveal reveal-1">
+                        تم<span class="text-orange">...</span> لأن الانطباع <span class="gold-shimmer">يدوم</span>
+                    </h1>
+                    <p class="font-cairo text-teal-100 text-base sm:text-xl leading-relaxed max-w-xl mx-auto lg:mx-0 mb-9 reveal reveal-2">
+                        نصمم لحظات التقدير ونصنع الذكريات التي تبقى — دروع، كؤوس، ميداليات وهدايا مخصصة لكل مناسبة.
+                    </p>
+                    <a href="#about-preview" class="inline-block bg-orange hover:bg-orange-glow text-navy-900 px-9 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange/30 hover:-translate-y-0.5 reveal reveal-3">
+                        اكتشف خدماتنا
+                    </a>
+                </div>
+
+                <!-- Category tiles -->
+                <div class="grid grid-cols-2 gap-4 sm:gap-5 reveal reveal-4">
+                    <a href="#about-preview" class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-orange hover:bg-white/[0.06]">
+                        <svg class="w-8 h-8 sm:w-9 sm:h-9 text-teal mb-4 transition-colors duration-300 group-hover:text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3z"/>
+                        </svg>
+                        <h3 class="font-kufam text-white text-base sm:text-lg font-bold mb-1">دروع تذكارية</h3>
+                        <p class="font-cairo text-white/45 text-xs sm:text-sm">تصميم وتصنيع بالنقش</p>
+                    </a>
+
+                    <a href="#about-preview" class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-orange hover:bg-white/[0.06]">
+                        <svg class="w-8 h-8 sm:w-9 sm:h-9 text-teal mb-4 transition-colors duration-300 group-hover:text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 4h8v5a4 4 0 01-8 0V4zM8 5H5v2a3 3 0 003 3M16 5h3v2a3 3 0 01-3 3M12 13v4M9 20h6"/>
+                        </svg>
+                        <h3 class="font-kufam text-white text-base sm:text-lg font-bold mb-1">كؤوس</h3>
+                        <p class="font-cairo text-white/45 text-xs sm:text-sm">للبطولات والمسابقات</p>
+                    </a>
+
+                    <a href="#about-preview" class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-orange hover:bg-white/[0.06]">
+                        <svg class="w-8 h-8 sm:w-9 sm:h-9 text-teal mb-4 transition-colors duration-300 group-hover:text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <circle cx="12" cy="15" r="5"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.5 3l2.4 5M15.5 3l-2.4 5"/>
+                        </svg>
+                        <h3 class="font-kufam text-white text-base sm:text-lg font-bold mb-1">ميداليات</h3>
+                        <p class="font-cairo text-white/45 text-xs sm:text-sm">تكريم يليق بالإنجاز</p>
+                    </a>
+
+                    <a href="#about-preview" class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-orange hover:bg-white/[0.06]">
+                        <svg class="w-8 h-8 sm:w-9 sm:h-9 text-teal mb-4 transition-colors duration-300 group-hover:text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 10h16v10H4V10zM3 7h18v3H3V7zM12 7v13M12 7C10.3 7 8.5 6.2 8.5 4.8S9.6 3 10.5 3 12 5.2 12 7zM12 7c1.7 0 3.5-.8 3.5-2.2S14.4 3 13.5 3 12 5.2 12 7z"/>
+                        </svg>
+                        <h3 class="font-kufam text-white text-base sm:text-lg font-bold mb-1">هدايا مخصصة</h3>
+                        <p class="font-cairo text-white/45 text-xs sm:text-sm">للشركات والمناسبات</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================ -->
+    <!-- Sliver of the next section, so each hero is judged in context -->
+    <!-- ============================================================ -->
+    <section id="about-preview" class="py-20 relative overflow-hidden" style="background: linear-gradient(180deg, #020816 0%, #03102B 100%);">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <h2 class="font-kufam text-white text-3xl sm:text-4xl font-bold mb-8 text-start">
+                من نحن <span class="text-orange">؟</span>
+            </h2>
+            <p class="font-cairo text-gray-200 text-lg leading-loose text-start">
+                <span class="text-orange font-bold">تم</span> شركة سعودية متخصصة في تصميم الجوائز والدروع والمجسمات والهدايا، وتنظيم الفعاليات. تؤمن بالفكر والإبداع لتحقيق الريادة في عالم الدعاية والإعلان.
+            </p>
+        </div>
+    </section>
+
+
+    <script>
+        const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* ---------- Carousel (fade mode) ---------- */
+        function setupCarousel(root) {
+            const slides = Array.from(root.querySelectorAll('.cslide'));
+            const dots   = Array.from(root.querySelectorAll('.cdot'));
+            let index = 0, timer = null;
+
+            function go(n) {
+                index = (n + slides.length) % slides.length;
+                slides.forEach((s, k) => s.classList.toggle('is-active', k === index));
+                dots.forEach((d, k) => d.classList.toggle('is-active', k === index));
+            }
+            function autoplay() {
+                clearInterval(timer);
+                if (!REDUCED) timer = setInterval(() => go(index + 1), 6000);
+            }
+
+            root.querySelectorAll('[data-action]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    go(index + (btn.dataset.action === 'next' ? 1 : -1));
+                    autoplay();
+                });
+            });
+            dots.forEach((dot, k) => dot.addEventListener('click', () => { go(k); autoplay(); }));
+
+            root.start = () => { go(0); autoplay(); };
+            root.stop  = () => clearInterval(timer);
+            go(0);
+        }
+        document.querySelectorAll('[data-carousel]').forEach(setupCarousel);
+
+        /* ---------- Option chooser ---------- */
+        const NAMES = {
+            1: 'الزخرفة الإسلامية',
+            2: 'الحد الأدنى',
+            3: 'بطاقات الفئات',
+        };
+        const LAST = 3;
+        const panels  = Array.from(document.querySelectorAll('[data-opt-panel]'));
+        const buttons = Array.from(document.querySelectorAll('.opt-btn'));
+        const nameEl  = document.getElementById('opt-name');
+        let current = 1;
+
+        function show(n, updateHash) {
+            if (!NAMES[n]) return;
+            current = n;
+
+            panels.forEach(panel => {
+                const on = panel.dataset.optPanel === String(n);
+                panel.classList.toggle('hidden', !on);
+                panel.querySelectorAll('[data-carousel]').forEach(c => on ? c.start() : c.stop());
+            });
+            buttons.forEach(b => b.classList.toggle('is-active', b.dataset.opt === String(n)));
+            nameEl.textContent = NAMES[n];
+
+            if (updateHash !== false) history.replaceState(null, '', '#v' + n);
+            window.scrollTo(0, 0);
+        }
+
+        buttons.forEach(b => b.addEventListener('click', () => show(Number(b.dataset.opt))));
+
+        // Digit shortcuts only. Arrow keys are deliberately NOT bound — they are how a
+        // reviewer scrolls the page, and hijacking them silently swapped the visible option.
+        document.addEventListener('keydown', e => {
+            if (e.metaKey || e.ctrlKey || e.altKey) return;
+            const tag = (e.target.tagName || '').toLowerCase();
+            if (tag === 'input' || tag === 'textarea' || e.target.isContentEditable) return;
+            const n = Number(e.key);
+            if (n >= 1 && n <= LAST) show(n);
+        });
+
+        // The hash is authoritative: #v2 opens straight to option ٢, and navigating the
+        // hash directly (back button, shared link) always resyncs the view.
+        function optionFromHash() {
+            return Number((location.hash.match(/^#v([1-9])$/) || [])[1]);
+        }
+        window.addEventListener('hashchange', () => {
+            const n = optionFromHash();
+            if (n && n !== current) show(n, false);
+        });
+
+        show(optionFromHash() || 1, false);
+    </script>
+</body>
+</html>
