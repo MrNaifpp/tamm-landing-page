@@ -104,6 +104,23 @@
             background-size: 120px 120px;
         }
 
+        /* ===== Option ٧ — Saudi Suleimani star (Najdi plaster-carving motif) ===== */
+        /* Khatam Suleiman as the eight-pointed star (two rotated squares) — the classic
+           Saudi/Islamic form. Deliberately NOT the six-point hexagram, which modern eyes
+           misread as a Star of David. Center star + corner echoes tile seamlessly. */
+        .suleimani-bg {
+            background-color: #03102B;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke-width='1.2'%3E%3Cpath d='M0 0 L140 140 M140 0 L0 140' stroke='%2345C0BE' opacity='0.05'/%3E%3Cg stroke='%23C9A84C' opacity='0.13'%3E%3Cpath d='M40 40 H100 V100 H40 Z'/%3E%3Cpath d='M70 27.6 L112.4 70 L70 112.4 L27.6 70 Z'/%3E%3C/g%3E%3Ccircle cx='70' cy='70' r='10' stroke='%2345C0BE' opacity='0.12'/%3E%3Ccircle cx='70' cy='70' r='3' stroke='%23C9A84C' opacity='0.16'/%3E%3Cg stroke='%2345C0BE' opacity='0.09'%3E%3Cpath d='M-20 -20 H20 V20 H-20 Z M0 -28.3 L28.3 0 L0 28.3 L-28.3 0 Z'/%3E%3Cpath d='M120 -20 H160 V20 H120 Z M140 -28.3 L168.3 0 L140 28.3 L111.7 0 Z'/%3E%3Cpath d='M-20 120 H20 V160 H-20 Z M0 111.7 L28.3 140 L0 168.3 L-28.3 140 Z'/%3E%3Cpath d='M120 120 H160 V160 H120 Z M140 111.7 L168.3 140 L140 168.3 L111.7 140 Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-size: 140px 140px;
+        }
+        /* Sadu-style triangle band along the base */
+        .sadu-band {
+            height: 18px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='18' viewBox='0 0 48 18'%3E%3Cpath d='M0 18 L12 3 L24 18 Z' fill='%23C9A84C' opacity='0.45'/%3E%3Cpath d='M24 18 L36 3 L48 18 Z' fill='%2345C0BE' opacity='0.38'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: 48px 18px;
+        }
+
         /* ===== Option ٢ — scroll cue ===== */
         @keyframes nudge {
             0%, 100% { transform: translateY(0);   opacity: .5; }
@@ -209,6 +226,7 @@
                 <button class="opt-btn" data-opt="4" aria-label="الخيار الرابع">٤</button>
                 <button class="opt-btn" data-opt="5" aria-label="الخيار الخامس">٥</button>
                 <button class="opt-btn" data-opt="6" aria-label="الخيار السادس">٦</button>
+                <button class="opt-btn" data-opt="7" aria-label="الخيار السابع">٧</button>
             </div>
 
             <span id="opt-name" class="font-cairo text-sm sm:text-base font-bold text-orange whitespace-nowrap truncate">الزخرفة الإسلامية</span>
@@ -256,6 +274,82 @@
     <section data-opt-panel="1" class="relative min-h-[calc(100vh-3.5rem)] overflow-hidden girih-bg">
         <!-- Centred gold lift behind the type — a vignette, not a streak -->
         <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 60% 45% at 50% 46%, rgba(201,168,76,.13), transparent 70%);"></div>
+
+        <div class="cstage min-h-[calc(100vh-3.5rem)] cmode-fade" data-carousel>
+            <!-- Slide 1 -->
+            <div class="cslide is-active px-6">
+                <div class="text-center max-w-3xl">
+                    <h1 class="font-ruqaa text-white text-3xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+                        تم<span class="text-orange">...</span> لأن الانطباع <span class="gold-shimmer">يدوم</span>
+                    </h1>
+                    <p class="font-cairo text-teal-100 text-base sm:text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
+                        نصمم لحظات التقدير ونصنع الذكريات التي تبقى
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="#about-preview" class="bg-orange hover:bg-orange-glow text-navy-900 px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange/30 hover:-translate-y-0.5 w-full sm:w-auto">اكتشف خدماتنا</a>
+                        <a href="#about-preview" class="border-2 border-white/40 hover:border-orange text-white hover:text-orange px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto">تواصل معنا</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="cslide px-6">
+                <div class="text-center max-w-3xl">
+                    <h1 class="font-ruqaa text-white text-3xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+                        تصاميم <span class="gold-shimmer">فاخرة</span> تليق بإنجازاتكم
+                    </h1>
+                    <p class="font-cairo text-teal-100 text-base sm:text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
+                        دروع تذكارية وكؤوس مخصصة تحاكي الإبداع وتُجسّد التميز
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="#about-preview" class="bg-orange hover:bg-orange-glow text-navy-900 px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange/30 hover:-translate-y-0.5 w-full sm:w-auto">استعرض منتجاتنا</a>
+                        <a href="#about-preview" class="border-2 border-white/40 hover:border-orange text-white hover:text-orange px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto">شركاؤنا</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="cslide px-6">
+                <div class="text-center max-w-3xl">
+                    <h1 class="font-ruqaa text-white text-3xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+                        شركاؤكم في صناعة <span class="text-orange">لحظات التميز</span>
+                    </h1>
+                    <p class="font-cairo text-teal-100 text-base sm:text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
+                        من تصميم الهدايا إلى تنظيم الفعاليات، فريقنا معكم في كل التفاصيل
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="#about-preview" class="bg-orange hover:bg-orange-glow text-navy-900 px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange/30 hover:-translate-y-0.5 w-full sm:w-auto">تعرّف على تم</a>
+                        <a href="#about-preview" class="border-2 border-white/40 hover:border-orange text-white hover:text-orange px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto">خدماتنا الإبداعية</a>
+                    </div>
+                </div>
+            </div>
+
+            <button data-action="prev" aria-label="الشريحة السابقة" class="absolute start-4 sm:start-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-orange/80 border border-white/20 text-white flex items-center justify-center backdrop-blur-sm transition-all duration-300 z-20">
+                <svg class="w-5 h-5 rtl:scale-x-[-1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button data-action="next" aria-label="الشريحة التالية" class="absolute end-4 sm:end-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-orange/80 border border-white/20 text-white flex items-center justify-center backdrop-blur-sm transition-all duration-300 z-20">
+                <svg class="w-5 h-5 rtl:scale-x-[-1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-2 z-20">
+                <button class="cdot is-active" aria-label="الشريحة الأولى"></button>
+                <button class="cdot" aria-label="الشريحة الثانية"></button>
+                <button class="cdot" aria-label="الشريحة الثالثة"></button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================ -->
+    <!-- OPTION ٧ — الزخرفة السليمانية (Saudi Najdi star motif) · carousel -->
+    <!-- ============================================================ -->
+    <section data-opt-panel="7" class="hidden relative min-h-[calc(100vh-3.5rem)] overflow-hidden suleimani-bg">
+        <!-- Centred gold lift behind the type, as in option ١ -->
+        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 60% 45% at 50% 46%, rgba(201,168,76,.14), transparent 70%);"></div>
+
+        <!-- Najdi Sadu band grounding the base, with a gold hairline above it -->
+        <div class="absolute bottom-0 inset-x-0 pointer-events-none">
+            <div class="h-px bg-gold/30 mb-1"></div>
+            <div class="sadu-band"></div>
+        </div>
 
         <div class="cstage min-h-[calc(100vh-3.5rem)] cmode-fade" data-carousel>
             <!-- Slide 1 -->
@@ -766,8 +860,9 @@
             4: 'المسرح الذهبي',
             5: 'الزجاج التفاعلي',
             6: 'سماء التميز',
+            7: 'الزخرفة السليمانية',
         };
-        const LAST = 6;
+        const LAST = 7;
         const panels  = Array.from(document.querySelectorAll('[data-opt-panel]'));
         const buttons = Array.from(document.querySelectorAll('.opt-btn'));
         const nameEl  = document.getElementById('opt-name');
