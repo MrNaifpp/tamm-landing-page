@@ -152,32 +152,28 @@
             border-radius: 2px;
         }
 
-        /* ===== Hero Carousel ===== */
+        /* ===== Hero Carousel — crossfade over the girih pattern ===== */
         .hero-track {
-            /* Track runs LTR internally so index math is intuitive in either direction. */
-            direction: ltr;
-            display: flex;
+            position: relative;
             width: 100%;
             height: 100%;
-            transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
         }
         .hero-slide {
-            /* Restore RTL for content inside each slide so Arabic text aligns correctly. */
-            direction: rtl;
-            flex: 0 0 100%;
+            position: absolute;
+            inset: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 0 1.5rem;
-        }
-        .hero-slide-inner {
             opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+            transform: translateY(12px);
+            transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+            pointer-events: none;
         }
-        .hero-slide.is-active .hero-slide-inner {
+        .hero-slide.is-active {
             opacity: 1;
-            transform: translateY(0);
+            transform: none;
+            pointer-events: auto;
         }
         .hero-dot {
             width: 10px;
@@ -191,16 +187,15 @@
             width: 28px;
         }
 
-        /* ===== Hero wave streaks ===== */
-        .hero-wave path {
-            fill: none;
-            stroke-linecap: round;
-            filter: blur(28px);
-            opacity: 0.55;
+        /* Eight-point girih tessellation, teal on deep navy */
+        .girih-bg {
+            background-color: #03102B;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%2345C0BE' stroke-width='1.2' opacity='0.09'%3E%3Crect x='30' y='30' width='60' height='60'/%3E%3Crect x='30' y='30' width='60' height='60' transform='rotate(45 60 60)'/%3E%3Crect x='-30' y='-30' width='60' height='60'/%3E%3Crect x='-30' y='-30' width='60' height='60' transform='rotate(45 0 0)'/%3E%3Crect x='90' y='-30' width='60' height='60'/%3E%3Crect x='90' y='-30' width='60' height='60' transform='rotate(45 120 0)'/%3E%3Crect x='-30' y='90' width='60' height='60'/%3E%3Crect x='-30' y='90' width='60' height='60' transform='rotate(45 0 120)'/%3E%3Crect x='90' y='90' width='60' height='60'/%3E%3Crect x='90' y='90' width='60' height='60' transform='rotate(45 120 120)'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 120px 120px;
         }
-        .hero-wave .stroke-thin {
-            filter: blur(14px);
-            opacity: 0.7;
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-slide { transition: none; }
         }
     </style>
 </head>
@@ -260,47 +255,11 @@
 
 
     <!-- ============================================ -->
-    <!-- HERO — Carousel with wave streak background -->
+    <!-- HERO — Carousel over Islamic girih tessellation -->
     <!-- ============================================ -->
-    <section id="home" class="relative min-h-screen overflow-hidden" style="background: radial-gradient(ellipse at 30% 40%, #0A2F7A 0%, #051941 45%, #020816 100%);">
-        <!-- Wave streak SVG (decorative, non-interactive) -->
-        <svg class="hero-wave absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="streakBlue" x1="0%" y1="50%" x2="100%" y2="50%">
-                    <stop offset="0%" stop-color="#45C0BE" stop-opacity="0"/>
-                    <stop offset="40%" stop-color="#45C0BE" stop-opacity="0.9"/>
-                    <stop offset="100%" stop-color="#3A6CCF" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient id="streakOrange" x1="0%" y1="50%" x2="100%" y2="50%">
-                    <stop offset="0%" stop-color="#E89B3C" stop-opacity="0"/>
-                    <stop offset="50%" stop-color="#F2B65C" stop-opacity="0.95"/>
-                    <stop offset="100%" stop-color="#C57A22" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient id="streakNavy" x1="0%" y1="50%" x2="100%" y2="50%">
-                    <stop offset="0%" stop-color="#2D4A93" stop-opacity="0"/>
-                    <stop offset="50%" stop-color="#5972BA" stop-opacity="0.6"/>
-                    <stop offset="100%" stop-color="#08296C" stop-opacity="0"/>
-                </linearGradient>
-            </defs>
-            <!-- Wide curving streaks across the hero -->
-            <path d="M -100,520 C 280,320 620,720 900,420 C 1140,180 1340,560 1600,400" stroke="url(#streakBlue)" stroke-width="90"/>
-            <path d="M -100,620 C 320,420 660,820 940,520 C 1180,300 1340,640 1600,500" stroke="url(#streakNavy)" stroke-width="120"/>
-            <path d="M -100,460 C 260,260 600,640 880,360 C 1120,140 1340,500 1600,360" stroke="url(#streakOrange)" stroke-width="60"/>
-            <!-- Thinner accent strokes for definition -->
-            <path class="stroke-thin" d="M -100,540 C 280,340 620,740 900,440 C 1140,200 1340,580 1600,420" stroke="#7ED5D3" stroke-width="2"/>
-            <path class="stroke-thin" d="M -100,440 C 260,240 600,620 880,340 C 1120,120 1340,480 1600,340" stroke="#F2B65C" stroke-width="2"/>
-        </svg>
-
-        <!-- Sparkle Stars -->
-        <svg class="absolute top-24 right-24 w-6 h-6 text-orange sparkle" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41Z"/>
-        </svg>
-        <svg class="absolute top-1/3 start-20 w-4 h-4 text-teal-300 sparkle sparkle-delay-1" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41Z"/>
-        </svg>
-        <svg class="absolute bottom-32 end-1/3 w-5 h-5 text-orange-glow sparkle sparkle-delay-2" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41Z"/>
-        </svg>
+    <section id="home" class="relative min-h-screen overflow-hidden girih-bg">
+        <!-- Centred gold lift behind the type -->
+        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 60% 45% at 50% 46%, rgba(201,168,76,.13), transparent 70%);"></div>
 
         <!-- Carousel -->
         <div id="hero-carousel" class="relative z-10 w-full h-screen flex items-center" data-current="0">
@@ -535,18 +494,6 @@
     <!-- ============================================ -->
     <section id="portfolio" class="py-24 lg:py-32 relative overflow-hidden" style="background: linear-gradient(180deg, #03102B 0%, #020816 100%);">
         <div class="absolute inset-0 brand-pattern-dark opacity-60"></div>
-
-        <!-- Decorative bottom wave (echo of hero) -->
-        <svg class="absolute bottom-0 left-0 w-full h-48 opacity-40 pointer-events-none" viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="footerStreak" x1="0%" y1="50%" x2="100%" y2="50%">
-                    <stop offset="0%" stop-color="#E89B3C" stop-opacity="0"/>
-                    <stop offset="50%" stop-color="#E89B3C" stop-opacity="0.8"/>
-                    <stop offset="100%" stop-color="#45C0BE" stop-opacity="0"/>
-                </linearGradient>
-            </defs>
-            <path d="M -100,120 C 300,40 700,180 1100,80 C 1300,40 1500,140 1700,80" stroke="url(#footerStreak)" stroke-width="40" fill="none" style="filter: blur(18px);"/>
-        </svg>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <h2 class="font-kufam text-white text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-16 section-line" data-aos="fade-up">
@@ -800,7 +747,7 @@
         function goTo(index) {
             if (!slides.length) return;
             current = (index + slides.length) % slides.length;
-            track.style.transform = `translateX(${-current * 100}%)`;
+            // Crossfade: visibility is driven entirely by .is-active
             slides.forEach((s, i) => s.classList.toggle('is-active', i === current));
             dots.forEach((d, i) => d.classList.toggle('is-active', i === current));
             carousel.dataset.current = String(current);
@@ -811,6 +758,7 @@
 
         function startAutoplay() {
             stopAutoplay();
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
             autoplayTimer = setInterval(next, AUTOPLAY_MS);
         }
         function stopAutoplay() {
