@@ -123,6 +123,14 @@
             background-clip: text;
             animation: shimmer 4s linear infinite;
         }
+        .teal-shimmer {
+            background: linear-gradient(90deg, #45C0BE 0%, #A9E3E2 30%, #45C0BE 60%, #A9E3E2 80%, #45C0BE 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
 
         /* Brand pattern */
         .brand-pattern-dark {
@@ -183,15 +191,16 @@
             transition: background 0.3s ease, width 0.3s ease;
         }
         .hero-dot.is-active {
-            background: #E89B3C;
+            background: #45C0BE;
             width: 28px;
         }
 
-        /* Eight-point girih tessellation, teal on deep navy */
-        .girih-bg {
+        /* Official brand pattern (guidelines p.8): interlocking circles — one circle
+           per tile centre plus quarter-circles at the corners, radius = half the tile. */
+        .brand-pattern-hero {
             background-color: #03102B;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%2345C0BE' stroke-width='1.2' opacity='0.09'%3E%3Crect x='30' y='30' width='60' height='60'/%3E%3Crect x='30' y='30' width='60' height='60' transform='rotate(45 60 60)'/%3E%3Crect x='-30' y='-30' width='60' height='60'/%3E%3Crect x='-30' y='-30' width='60' height='60' transform='rotate(45 0 0)'/%3E%3Crect x='90' y='-30' width='60' height='60'/%3E%3Crect x='90' y='-30' width='60' height='60' transform='rotate(45 120 0)'/%3E%3Crect x='-30' y='90' width='60' height='60'/%3E%3Crect x='-30' y='90' width='60' height='60' transform='rotate(45 0 120)'/%3E%3Crect x='90' y='90' width='60' height='60'/%3E%3Crect x='90' y='90' width='60' height='60' transform='rotate(45 120 120)'/%3E%3C/g%3E%3C/svg%3E");
-            background-size: 120px 120px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'%3E%3Cg fill='none' stroke='%2345C0BE' stroke-width='1.3' opacity='0.10'%3E%3Ccircle cx='64' cy='64' r='64'/%3E%3Ccircle cx='0' cy='0' r='64'/%3E%3Ccircle cx='128' cy='0' r='64'/%3E%3Ccircle cx='0' cy='128' r='64'/%3E%3Ccircle cx='128' cy='128' r='64'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 128px 128px;
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -257,9 +266,9 @@
     <!-- ============================================ -->
     <!-- HERO — Carousel over Islamic girih tessellation -->
     <!-- ============================================ -->
-    <section id="home" class="relative min-h-screen overflow-hidden girih-bg">
-        <!-- Centred gold lift behind the type -->
-        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 60% 45% at 50% 46%, rgba(201,168,76,.13), transparent 70%);"></div>
+    <section id="home" class="relative min-h-screen overflow-hidden brand-pattern-hero">
+        <!-- Centred teal lift behind the type -->
+        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 60% 45% at 50% 46%, rgba(69,192,190,.12), transparent 70%);"></div>
 
         <!-- Carousel -->
         <div id="hero-carousel" class="relative z-10 w-full h-screen flex items-center" data-current="0">
@@ -268,16 +277,16 @@
                 <div class="hero-slide is-active" data-slide="0">
                     <div class="hero-slide-inner text-center max-w-4xl">
                         <h1 class="font-ruqaa text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-                            تم<span class="text-orange">...</span> لأن الانطباع <span class="gold-shimmer">يدوم</span>
+                            تم<span class="text-teal">...</span> لأن الانطباع <span class="teal-shimmer">يدوم</span>
                         </h1>
                         <p class="font-cairo text-teal-100 text-lg sm:text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
                             نصمم لحظات التقدير ونصنع الذكريات التي تبقى
                         </p>
                         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <a href="#services" class="bg-orange hover:bg-orange-glow text-navy-900 px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange/30 hover:-translate-y-0.5 w-full sm:w-auto">
+                            <a href="#services" class="bg-teal hover:bg-teal-300 text-navy-900 px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-teal/30 hover:-translate-y-0.5 w-full sm:w-auto">
                                 اكتشف خدماتنا
                             </a>
-                            <a href="#contact-footer" class="border-2 border-white/40 hover:border-orange text-white hover:text-orange px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto">
+                            <a href="#contact-footer" class="border-2 border-white/40 hover:border-teal text-white hover:text-teal px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto">
                                 تواصل معنا
                             </a>
                         </div>
@@ -288,16 +297,16 @@
                 <div class="hero-slide" data-slide="1">
                     <div class="hero-slide-inner text-center max-w-4xl">
                         <h1 class="font-ruqaa text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-                            تصاميم <span class="gold-shimmer">فاخرة</span> تليق بإنجازاتكم
+                            تصاميم <span class="teal-shimmer">فاخرة</span> تليق بإنجازاتكم
                         </h1>
                         <p class="font-cairo text-teal-100 text-lg sm:text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
                             دروع تذكارية وكؤوس مخصصة تحاكي الإبداع وتُجسّد التميز
                         </p>
                         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <a href="#products" class="bg-orange hover:bg-orange-glow text-navy-900 px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange/30 hover:-translate-y-0.5 w-full sm:w-auto">
+                            <a href="#products" class="bg-teal hover:bg-teal-300 text-navy-900 px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-teal/30 hover:-translate-y-0.5 w-full sm:w-auto">
                                 استعرض منتجاتنا
                             </a>
-                            <a href="#portfolio" class="border-2 border-white/40 hover:border-orange text-white hover:text-orange px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto">
+                            <a href="#portfolio" class="border-2 border-white/40 hover:border-teal text-white hover:text-teal px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto">
                                 شركاؤنا
                             </a>
                         </div>
@@ -308,16 +317,16 @@
                 <div class="hero-slide" data-slide="2">
                     <div class="hero-slide-inner text-center max-w-4xl">
                         <h1 class="font-ruqaa text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-                            شركاؤكم في صناعة <span class="text-orange">لحظات التميز</span>
+                            شركاؤكم في صناعة <span class="text-teal">لحظات التميز</span>
                         </h1>
                         <p class="font-cairo text-teal-100 text-lg sm:text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
                             من تصميم الهدايا إلى تنظيم الفعاليات، فريقنا معكم في كل التفاصيل
                         </p>
                         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <a href="#about" class="bg-orange hover:bg-orange-glow text-navy-900 px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange/30 hover:-translate-y-0.5 w-full sm:w-auto">
+                            <a href="#about" class="bg-teal hover:bg-teal-300 text-navy-900 px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-teal/30 hover:-translate-y-0.5 w-full sm:w-auto">
                                 تعرّف على تم
                             </a>
-                            <a href="#services" class="border-2 border-white/40 hover:border-orange text-white hover:text-orange px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto">
+                            <a href="#services" class="border-2 border-white/40 hover:border-teal text-white hover:text-teal px-8 py-3.5 rounded-xl font-cairo font-bold text-lg transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto">
                                 خدماتنا الإبداعية
                             </a>
                         </div>
@@ -328,12 +337,12 @@
             <!-- Arrows: positioned with logical props so they auto-flip in RTL.
                  In RTL, the visually-right arrow becomes "prev" and the visually-left
                  arrow becomes "next" — bound by data-action, not by position. -->
-            <button data-action="prev" aria-label="الشريحة السابقة" class="hero-arrow absolute start-4 sm:start-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-orange/80 border border-white/20 text-white flex items-center justify-center backdrop-blur-sm transition-all duration-300 z-20">
+            <button data-action="prev" aria-label="الشريحة السابقة" class="hero-arrow absolute start-4 sm:start-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-teal/80 border border-white/20 text-white flex items-center justify-center backdrop-blur-sm transition-all duration-300 z-20">
                 <svg class="w-5 h-5 rtl:scale-x-[-1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M15 19l-7-7 7-7"/>
                 </svg>
             </button>
-            <button data-action="next" aria-label="الشريحة التالية" class="hero-arrow absolute end-4 sm:end-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-orange/80 border border-white/20 text-white flex items-center justify-center backdrop-blur-sm transition-all duration-300 z-20">
+            <button data-action="next" aria-label="الشريحة التالية" class="hero-arrow absolute end-4 sm:end-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-teal/80 border border-white/20 text-white flex items-center justify-center backdrop-blur-sm transition-all duration-300 z-20">
                 <svg class="w-5 h-5 rtl:scale-x-[-1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/>
                 </svg>
