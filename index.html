@@ -52,25 +52,6 @@
                             800: '#1C4D4C',
                             900: '#0E2626',
                         },
-                        gold: {
-                            DEFAULT: '#C9A84C',
-                            50: '#FBF7EC',
-                            100: '#F3EBCF',
-                            200: '#E7D89F',
-                            300: '#DBC46F',
-                            400: '#CFB15F',
-                            500: '#C9A84C',
-                            600: '#A1863D',
-                            700: '#79652E',
-                            800: '#50431E',
-                            900: '#28220F',
-                        },
-                        orange: {
-                            DEFAULT: '#E89B3C',
-                            glow: '#F2B65C',
-                            soft: '#F5C77E',
-                            deep: '#C57A22',
-                        },
                         brand: {
                             black: '#080300',
                             gray: '#dcddde',
@@ -110,18 +91,10 @@
         }
         .animate-float { animation: float 6s ease-in-out infinite; }
 
-        /* Gold shimmer */
+        /* Teal shimmer */
         @keyframes shimmer {
             0% { background-position: -200% center; }
             100% { background-position: 200% center; }
-        }
-        .gold-shimmer {
-            background: linear-gradient(90deg, #C9A84C 0%, #E7D89F 30%, #C9A84C 60%, #E7D89F 80%, #C9A84C 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: shimmer 4s linear infinite;
         }
         .teal-shimmer {
             background: linear-gradient(90deg, #45C0BE 0%, #A9E3E2 30%, #45C0BE 60%, #A9E3E2 80%, #45C0BE 100%);
@@ -454,8 +427,8 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                 <!-- Product 1: Memorial Gifts -->
                 <div class="group rounded-2xl overflow-hidden bg-navy-800/40 border border-white/10 hover:border-teal/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal/10" data-aos="fade-up" data-aos-delay="0">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1578269174936-2709b6aeb913?w=600&h=400&fit=crop&auto=format" alt="هدايا تذكارية" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="relative h-56 overflow-hidden bg-navy-700 brand-pattern-dark">
+                        <img src="https://images.unsplash.com/photo-1578269174936-2709b6aeb913?w=600&h=400&fit=crop&auto=format" alt="هدايا تذكارية" width="600" height="400" loading="lazy" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-navy-900/95 via-navy-900/30 to-transparent"></div>
                     </div>
                     <div class="p-6 lg:p-7">
@@ -468,8 +441,8 @@
 
                 <!-- Product 2: Luxury Gifts -->
                 <div class="group rounded-2xl overflow-hidden bg-navy-800/40 border border-white/10 hover:border-teal/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal/10" data-aos="fade-up" data-aos-delay="150">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=600&h=400&fit=crop&auto=format" alt="هدايا فاخرة" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="relative h-56 overflow-hidden bg-navy-700 brand-pattern-dark">
+                        <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=600&h=400&fit=crop&auto=format" alt="هدايا فاخرة" width="600" height="400" loading="lazy" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-navy-900/95 via-navy-900/30 to-transparent"></div>
                     </div>
                     <div class="p-6 lg:p-7">
@@ -482,8 +455,8 @@
 
                 <!-- Product 3: Custom Gifts -->
                 <div class="group rounded-2xl overflow-hidden bg-navy-800/40 border border-white/10 hover:border-teal/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal/10" data-aos="fade-up" data-aos-delay="300">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1549465220-1a8b9238f7e1?w=600&h=400&fit=crop&auto=format" alt="هدايا مخصصة" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="relative h-56 overflow-hidden bg-navy-700 brand-pattern-dark">
+                        <img src="assets/tamm-custom-gifts.jpg" alt="هدايا مخصصة تحمل هوية تم" width="1200" height="800" loading="lazy" onerror="this.style.display='none'" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-navy-900/95 via-navy-900/30 to-transparent"></div>
                     </div>
                     <div class="p-6 lg:p-7">
