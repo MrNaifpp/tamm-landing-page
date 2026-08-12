@@ -147,7 +147,7 @@
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #03102B; }
         ::-webkit-scrollbar-thumb { background: #45C0BE; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #E89B3C; }
+        ::-webkit-scrollbar-thumb:hover { background: #7ED5D3; }
 
         /* Section heading underline */
         .section-line::after {
@@ -155,7 +155,7 @@
             display: block;
             width: 80px;
             height: 4px;
-            background: linear-gradient(90deg, #45C0BE, #E89B3C);
+            background: linear-gradient(90deg, #45C0BE, #2A7372);
             margin: 16px auto 0;
             border-radius: 2px;
         }
@@ -230,11 +230,11 @@
 
                 <!-- Desktop Links (visual left in RTL) -->
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="#about" class="nav-link nav-text text-white/90 hover:text-orange transition-colors duration-300 font-cairo font-medium">نبذة عنا</a>
-                    <a href="#services" class="nav-link nav-text text-white/90 hover:text-orange transition-colors duration-300 font-cairo font-medium">الخدمات</a>
-                    <a href="#products" class="nav-link nav-text text-white/90 hover:text-orange transition-colors duration-300 font-cairo font-medium">الأعمال</a>
-                    <a href="#portfolio" class="nav-link nav-text text-white/90 hover:text-orange transition-colors duration-300 font-cairo font-medium">ملفات الأعمال</a>
-                    <a href="#contact-footer" class="nav-link nav-text text-white/90 hover:text-orange transition-colors duration-300 font-cairo font-medium">تواصل معنا</a>
+                    <a href="#about" class="nav-link nav-text text-white/90 hover:text-teal transition-colors duration-300 font-cairo font-medium">نبذة عنا</a>
+                    <a href="#services" class="nav-link nav-text text-white/90 hover:text-teal transition-colors duration-300 font-cairo font-medium">الخدمات</a>
+                    <a href="#products" class="nav-link nav-text text-white/90 hover:text-teal transition-colors duration-300 font-cairo font-medium">الأعمال</a>
+                    <a href="#portfolio" class="nav-link nav-text text-white/90 hover:text-teal transition-colors duration-300 font-cairo font-medium">ملفات الأعمال</a>
+                    <a href="#contact-footer" class="nav-link nav-text text-white/90 hover:text-teal transition-colors duration-300 font-cairo font-medium">تواصل معنا</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -252,11 +252,11 @@
         <!-- Mobile Menu (uses inline transform — JS toggles between hidden/visible) -->
         <div id="mobile-menu" class="md:hidden fixed top-20 right-0 bottom-0 w-72 bg-navy-800/95 backdrop-blur-lg transition-transform duration-300 ease-in-out z-40" style="transform: translateX(100%);">
             <div class="flex flex-col p-6 gap-4">
-                <a href="#about" class="mobile-nav-link text-white/90 hover:text-orange py-3 border-b border-white/10 font-cairo text-lg">نبذة عنا</a>
-                <a href="#services" class="mobile-nav-link text-white/90 hover:text-orange py-3 border-b border-white/10 font-cairo text-lg">الخدمات</a>
-                <a href="#products" class="mobile-nav-link text-white/90 hover:text-orange py-3 border-b border-white/10 font-cairo text-lg">الأعمال</a>
-                <a href="#portfolio" class="mobile-nav-link text-white/90 hover:text-orange py-3 border-b border-white/10 font-cairo text-lg">ملفات الأعمال</a>
-                <a href="#contact-footer" class="mobile-nav-link bg-orange hover:bg-orange-deep text-white text-center px-6 py-3 rounded-lg font-cairo font-bold mt-4 transition-colors duration-300">تواصل معنا</a>
+                <a href="#about" class="mobile-nav-link text-white/90 hover:text-teal py-3 border-b border-white/10 font-cairo text-lg">نبذة عنا</a>
+                <a href="#services" class="mobile-nav-link text-white/90 hover:text-teal py-3 border-b border-white/10 font-cairo text-lg">الخدمات</a>
+                <a href="#products" class="mobile-nav-link text-white/90 hover:text-teal py-3 border-b border-white/10 font-cairo text-lg">الأعمال</a>
+                <a href="#portfolio" class="mobile-nav-link text-white/90 hover:text-teal py-3 border-b border-white/10 font-cairo text-lg">ملفات الأعمال</a>
+                <a href="#contact-footer" class="mobile-nav-link bg-teal hover:bg-teal-300 text-navy-900 text-center px-6 py-3 rounded-lg font-cairo font-bold mt-4 transition-colors duration-300">تواصل معنا</a>
             </div>
         </div>
         <div id="menu-overlay" class="md:hidden fixed inset-0 bg-black/50 hidden z-30" style="top: 80px;"></div>
@@ -365,7 +365,7 @@
         <div class="absolute inset-0 brand-pattern-dark opacity-60"></div>
 
         <!-- Floating sparkle accent -->
-        <svg class="absolute top-24 end-12 lg:end-32 w-10 h-10 text-orange/70 sparkle" viewBox="0 0 24 24" fill="currentColor">
+        <svg class="absolute top-24 end-12 lg:end-32 w-10 h-10 text-teal/70 sparkle" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41Z"/>
         </svg>
         <svg class="absolute bottom-20 start-16 w-6 h-6 text-teal sparkle sparkle-delay-2" viewBox="0 0 24 24" fill="currentColor">
@@ -374,13 +374,13 @@
 
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <h2 class="font-kufam text-white text-3xl sm:text-4xl lg:text-5xl font-bold mb-10 text-start" data-aos="fade-up">
-                من نحن <span class="text-orange">؟</span>
+                من نحن <span class="text-teal">؟</span>
             </h2>
             <div class="space-y-6 text-start" data-aos="fade-up" data-aos-delay="100">
-                <p class="font-cairo text-gray-200 text-lg lg:text-xl leading-loose">
-                    <span class="text-orange font-bold">تم</span> شركة سعودية متخصصة في تصميم الجوائز والدروع والمجسمات والهدايا، وتنظيم الفعاليات. تؤمن بالفكر والإبداع لتحقيق الريادة في عالم الدعاية والإعلان.
+                <p class="font-cairo text-brand-gray text-lg lg:text-xl leading-loose">
+                    <span class="text-teal font-bold">تم</span> شركة سعودية متخصصة في تصميم الجوائز والدروع والمجسمات والهدايا، وتنظيم الفعاليات. تؤمن بالفكر والإبداع لتحقيق الريادة في عالم الدعاية والإعلان.
                 </p>
-                <p class="font-cairo text-gray-300 text-lg lg:text-xl leading-loose">
+                <p class="font-cairo text-brand-gray text-lg lg:text-xl leading-loose">
                     وتفخر <span class="text-teal font-bold">تم</span> بعملائها وشركائها الأعزاء، كما تسعى لبناء شراكات ممتدة مع الشركات والمؤسسات الحكومية والخاصة داخل المملكة وخارجها.
                 </p>
             </div>
@@ -399,9 +399,9 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Service 1: Shields & Gifts -->
-                <div class="group relative rounded-2xl p-6 lg:p-8 text-center bg-navy-800/40 hover:bg-navy-800/70 border border-white/10 hover:border-orange/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange/10" data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-teal/10 group-hover:bg-orange/20 flex items-center justify-center transition-colors">
-                        <svg class="w-7 h-7 text-teal group-hover:text-orange transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="group relative rounded-2xl p-6 lg:p-8 text-center bg-navy-800/40 hover:bg-navy-800/70 border border-white/10 hover:border-teal/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal/10" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-teal/10 group-hover:bg-teal/20 flex items-center justify-center transition-colors">
+                        <svg class="w-7 h-7 text-teal group-hover:text-teal transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                         </svg>
                     </div>
@@ -409,9 +409,9 @@
                 </div>
 
                 <!-- Service 2: Luxury Gifts -->
-                <div class="group relative rounded-2xl p-6 lg:p-8 text-center bg-navy-800/40 hover:bg-navy-800/70 border border-white/10 hover:border-orange/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange/10" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-gold/10 group-hover:bg-orange/20 flex items-center justify-center transition-colors">
-                        <svg class="w-7 h-7 text-gold group-hover:text-orange transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                <div class="group relative rounded-2xl p-6 lg:p-8 text-center bg-navy-800/40 hover:bg-navy-800/70 border border-white/10 hover:border-teal/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal/10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-teal/10 group-hover:bg-teal/20 flex items-center justify-center transition-colors">
+                        <svg class="w-7 h-7 text-teal group-hover:text-teal transition-colors" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
                         </svg>
                     </div>
@@ -419,9 +419,9 @@
                 </div>
 
                 <!-- Service 3: Seasonal Gifts -->
-                <div class="group relative rounded-2xl p-6 lg:p-8 text-center bg-navy-800/40 hover:bg-navy-800/70 border border-white/10 hover:border-orange/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange/10" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-teal/10 group-hover:bg-orange/20 flex items-center justify-center transition-colors">
-                        <svg class="w-7 h-7 text-teal group-hover:text-orange transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="group relative rounded-2xl p-6 lg:p-8 text-center bg-navy-800/40 hover:bg-navy-800/70 border border-white/10 hover:border-teal/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal/10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-teal/10 group-hover:bg-teal/20 flex items-center justify-center transition-colors">
+                        <svg class="w-7 h-7 text-teal group-hover:text-teal transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
                         </svg>
                     </div>
@@ -429,9 +429,9 @@
                 </div>
 
                 <!-- Service 4: Event Organization -->
-                <div class="group relative rounded-2xl p-6 lg:p-8 text-center bg-navy-800/40 hover:bg-navy-800/70 border border-white/10 hover:border-orange/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange/10" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-gold/10 group-hover:bg-orange/20 flex items-center justify-center transition-colors">
-                        <svg class="w-7 h-7 text-gold group-hover:text-orange transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="group relative rounded-2xl p-6 lg:p-8 text-center bg-navy-800/40 hover:bg-navy-800/70 border border-white/10 hover:border-teal/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal/10" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-teal/10 group-hover:bg-teal/20 flex items-center justify-center transition-colors">
+                        <svg class="w-7 h-7 text-teal group-hover:text-teal transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                         </svg>
                     </div>
@@ -453,42 +453,42 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                 <!-- Product 1: Memorial Gifts -->
-                <div class="group rounded-2xl overflow-hidden bg-navy-800/40 border border-white/10 hover:border-orange/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange/10" data-aos="fade-up" data-aos-delay="0">
+                <div class="group rounded-2xl overflow-hidden bg-navy-800/40 border border-white/10 hover:border-teal/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal/10" data-aos="fade-up" data-aos-delay="0">
                     <div class="relative h-56 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1578269174936-2709b6aeb913?w=600&h=400&fit=crop&auto=format" alt="هدايا تذكارية" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-navy-900/95 via-navy-900/30 to-transparent"></div>
                     </div>
                     <div class="p-6 lg:p-7">
                         <h3 class="font-kufam text-white text-xl font-bold mb-3 text-start">هدايا تذكارية</h3>
-                        <p class="font-cairo text-gray-300 leading-relaxed text-start">
+                        <p class="font-cairo text-brand-gray leading-relaxed text-start">
                             تصميم مخصص من الكريستال النقي واللوحات المعدنية المحفورة بالليزر بدقة بالغة.
                         </p>
                     </div>
                 </div>
 
                 <!-- Product 2: Luxury Gifts -->
-                <div class="group rounded-2xl overflow-hidden bg-navy-800/40 border border-white/10 hover:border-orange/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange/10" data-aos="fade-up" data-aos-delay="150">
+                <div class="group rounded-2xl overflow-hidden bg-navy-800/40 border border-white/10 hover:border-teal/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal/10" data-aos="fade-up" data-aos-delay="150">
                     <div class="relative h-56 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=600&h=400&fit=crop&auto=format" alt="هدايا فاخرة" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-navy-900/95 via-navy-900/30 to-transparent"></div>
                     </div>
                     <div class="p-6 lg:p-7">
                         <h3 class="font-kufam text-white text-xl font-bold mb-3 text-start">هدايا فاخرة</h3>
-                        <p class="font-cairo text-gray-300 leading-relaxed text-start">
+                        <p class="font-cairo text-brand-gray leading-relaxed text-start">
                             صناديق فاخرة تضم أطقم مكتبية ودروع تكريمية لكبار الشخصيات والشركاء.
                         </p>
                     </div>
                 </div>
 
                 <!-- Product 3: Custom Gifts -->
-                <div class="group rounded-2xl overflow-hidden bg-navy-800/40 border border-white/10 hover:border-orange/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange/10" data-aos="fade-up" data-aos-delay="300">
+                <div class="group rounded-2xl overflow-hidden bg-navy-800/40 border border-white/10 hover:border-teal/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal/10" data-aos="fade-up" data-aos-delay="300">
                     <div class="relative h-56 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1549465220-1a8b9238f7e1?w=600&h=400&fit=crop&auto=format" alt="هدايا مخصصة" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-navy-900/95 via-navy-900/30 to-transparent"></div>
                     </div>
                     <div class="p-6 lg:p-7">
                         <h3 class="font-kufam text-white text-xl font-bold mb-3 text-start">هدايا مخصصة</h3>
-                        <p class="font-cairo text-gray-300 leading-relaxed text-start">
+                        <p class="font-cairo text-brand-gray leading-relaxed text-start">
                             تصاميم مبتكرة تُصنع خصيصًا حسب احتياجاتكم وهويتكم بأرقى الخامات.
                         </p>
                     </div>
@@ -510,23 +510,23 @@
             </h2>
 
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6">
-                <div class="aspect-[3/2] flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-orange/40 hover:bg-white/10 transition-all duration-300" data-aos="zoom-in" data-aos-delay="0">
-                    <span class="font-kufam text-white/70 hover:text-orange text-base lg:text-lg font-bold transition-colors">أرامكو</span>
+                <div class="aspect-[3/2] flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-teal/40 hover:bg-white/10 transition-all duration-300" data-aos="zoom-in" data-aos-delay="0">
+                    <span class="font-kufam text-white/70 hover:text-teal text-base lg:text-lg font-bold transition-colors">أرامكو</span>
                 </div>
-                <div class="aspect-[3/2] flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-orange/40 hover:bg-white/10 transition-all duration-300" data-aos="zoom-in" data-aos-delay="50">
-                    <span class="font-kufam text-white/70 hover:text-orange text-base lg:text-lg font-bold transition-colors">سابك</span>
+                <div class="aspect-[3/2] flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-teal/40 hover:bg-white/10 transition-all duration-300" data-aos="zoom-in" data-aos-delay="50">
+                    <span class="font-kufam text-white/70 hover:text-teal text-base lg:text-lg font-bold transition-colors">سابك</span>
                 </div>
-                <div class="aspect-[3/2] flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-orange/40 hover:bg-white/10 transition-all duration-300" data-aos="zoom-in" data-aos-delay="100">
-                    <span class="font-kufam text-white/70 hover:text-orange text-base lg:text-lg font-bold transition-colors">STC</span>
+                <div class="aspect-[3/2] flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-teal/40 hover:bg-white/10 transition-all duration-300" data-aos="zoom-in" data-aos-delay="100">
+                    <span class="font-kufam text-white/70 hover:text-teal text-base lg:text-lg font-bold transition-colors">STC</span>
                 </div>
-                <div class="aspect-[3/2] flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-orange/40 hover:bg-white/10 transition-all duration-300" data-aos="zoom-in" data-aos-delay="150">
-                    <span class="font-kufam text-white/70 hover:text-orange text-base lg:text-lg font-bold transition-colors">الراجحي</span>
+                <div class="aspect-[3/2] flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-teal/40 hover:bg-white/10 transition-all duration-300" data-aos="zoom-in" data-aos-delay="150">
+                    <span class="font-kufam text-white/70 hover:text-teal text-base lg:text-lg font-bold transition-colors">الراجحي</span>
                 </div>
-                <div class="aspect-[3/2] flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-orange/40 hover:bg-white/10 transition-all duration-300" data-aos="zoom-in" data-aos-delay="200">
-                    <span class="font-kufam text-white/70 hover:text-orange text-base lg:text-lg font-bold transition-colors">نيوم</span>
+                <div class="aspect-[3/2] flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-teal/40 hover:bg-white/10 transition-all duration-300" data-aos="zoom-in" data-aos-delay="200">
+                    <span class="font-kufam text-white/70 hover:text-teal text-base lg:text-lg font-bold transition-colors">نيوم</span>
                 </div>
-                <div class="aspect-[3/2] flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-orange/40 hover:bg-white/10 transition-all duration-300" data-aos="zoom-in" data-aos-delay="250">
-                    <span class="font-kufam text-white/70 hover:text-orange text-sm lg:text-base font-bold transition-colors text-center px-2">هيئة الترفيه</span>
+                <div class="aspect-[3/2] flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-teal/40 hover:bg-white/10 transition-all duration-300" data-aos="zoom-in" data-aos-delay="250">
+                    <span class="font-kufam text-white/70 hover:text-teal text-sm lg:text-base font-bold transition-colors text-center px-2">هيئة الترفيه</span>
                 </div>
             </div>
         </div>
@@ -552,16 +552,16 @@
                             <path d="M567.89 165.2L590.55 165.2C594.43 165.2 597.97 163.02 599.75 159.58C607.49 144.63 612.1 127.78 612.65 109.84C612.49 98.76 603.11 89.48 592.0 89.48C603.21 89.48 612.66 80.32 612.66 68.81C612.66 80.32 621.8 89.48 633.31 89.48C622.32 89.48 613.51 98.09 612.74 108.63C613.1 126.98 617.57 144.22 625.28 159.48C627.05 162.98 630.62 165.2 634.53 165.2L645.57 165.2C649.45 165.2 652.99 163.02 654.77 159.58C662.51 144.63 667.12 127.78 667.67 109.84C667.51 98.76 658.13 89.48 647.01 89.48C658.23 89.48 667.68 80.32 667.68 68.81C667.68 80.32 676.82 89.48 688.33 89.48C677.33 89.48 668.52 98.09 667.76 108.63C668.11 126.98 672.59 144.22 680.3 159.48C682.07 162.98 685.63 165.2 689.55 165.2L712.43 165.2C718.14 165.2 722.76 160.58 722.76 154.88L722.76 10.34C722.76 4.63 718.14 0.01 712.43 0.01L660.62 0.01C660.68 0.01 660.75 0.02 660.82 0.02C649.31 0.02 640.17 9.46 640.17 20.67C640.17 9.46 630.72 0.02 619.51 0.02C619.57 0.02 619.63 0.01 619.7 0.01L567.89 0.01C562.19 0.01 557.56 4.63 557.56 10.34L557.56 154.88C557.56 160.58 562.19 165.2 567.89 165.2Z"/>
                         </g>
                     </svg>
-                    <p class="font-cairo text-gray-400 leading-relaxed mb-6 text-start">شركة سعودية متخصصة في تصميم الجوائز والدروع والمجسمات والهدايا، وتنظيم الفعاليات.</p>
+                    <p class="font-cairo text-brand-gray/75 leading-relaxed mb-6 text-start">شركة سعودية متخصصة في تصميم الجوائز والدروع والمجسمات والهدايا، وتنظيم الفعاليات.</p>
                     <div class="flex gap-3">
-                        <a href="#" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-orange/20 flex items-center justify-center transition-colors" aria-label="تويتر">
-                            <svg class="w-4 h-4 text-gray-400 hover:text-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-teal/20 flex items-center justify-center transition-colors" aria-label="تويتر">
+                            <svg class="w-4 h-4 text-brand-gray/75 hover:text-teal" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                         </a>
-                        <a href="#" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-orange/20 flex items-center justify-center transition-colors" aria-label="انستغرام">
-                            <svg class="w-4 h-4 text-gray-400 hover:text-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-teal/20 flex items-center justify-center transition-colors" aria-label="انستغرام">
+                            <svg class="w-4 h-4 text-brand-gray/75 hover:text-teal" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                         </a>
-                        <a href="#" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-orange/20 flex items-center justify-center transition-colors" aria-label="لينكد إن">
-                            <svg class="w-4 h-4 text-gray-400 hover:text-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-teal/20 flex items-center justify-center transition-colors" aria-label="لينكد إن">
+                            <svg class="w-4 h-4 text-brand-gray/75 hover:text-teal" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                         </a>
                     </div>
                 </div>
@@ -570,10 +570,10 @@
                 <div>
                     <h4 class="font-kufam text-white text-lg font-bold mb-6 text-start">روابط سريعة</h4>
                     <ul class="space-y-3">
-                        <li><a href="#about" class="font-cairo text-gray-400 hover:text-orange transition-colors">نبذة عنا</a></li>
-                        <li><a href="#services" class="font-cairo text-gray-400 hover:text-orange transition-colors">الخدمات</a></li>
-                        <li><a href="#products" class="font-cairo text-gray-400 hover:text-orange transition-colors">الأعمال</a></li>
-                        <li><a href="#portfolio" class="font-cairo text-gray-400 hover:text-orange transition-colors">ملفات الأعمال</a></li>
+                        <li><a href="#about" class="font-cairo text-brand-gray/75 hover:text-teal transition-colors">نبذة عنا</a></li>
+                        <li><a href="#services" class="font-cairo text-brand-gray/75 hover:text-teal transition-colors">الخدمات</a></li>
+                        <li><a href="#products" class="font-cairo text-brand-gray/75 hover:text-teal transition-colors">الأعمال</a></li>
+                        <li><a href="#portfolio" class="font-cairo text-brand-gray/75 hover:text-teal transition-colors">ملفات الأعمال</a></li>
                     </ul>
                 </div>
 
@@ -581,10 +581,10 @@
                 <div>
                     <h4 class="font-kufam text-white text-lg font-bold mb-6 text-start">خدماتنا</h4>
                     <ul class="space-y-3">
-                        <li><a href="#services" class="font-cairo text-gray-400 hover:text-orange transition-colors">دروع وهدايا</a></li>
-                        <li><a href="#services" class="font-cairo text-gray-400 hover:text-orange transition-colors">هدايا الفاخرة</a></li>
-                        <li><a href="#services" class="font-cairo text-gray-400 hover:text-orange transition-colors">هدايا موسمية</a></li>
-                        <li><a href="#services" class="font-cairo text-gray-400 hover:text-orange transition-colors">تنظيم الفعاليات</a></li>
+                        <li><a href="#services" class="font-cairo text-brand-gray/75 hover:text-teal transition-colors">دروع وهدايا</a></li>
+                        <li><a href="#services" class="font-cairo text-brand-gray/75 hover:text-teal transition-colors">هدايا الفاخرة</a></li>
+                        <li><a href="#services" class="font-cairo text-brand-gray/75 hover:text-teal transition-colors">هدايا موسمية</a></li>
+                        <li><a href="#services" class="font-cairo text-brand-gray/75 hover:text-teal transition-colors">تنظيم الفعاليات</a></li>
                     </ul>
                 </div>
 
@@ -592,10 +592,10 @@
                 <div>
                     <h4 class="font-kufam text-white text-lg font-bold mb-6 text-start">تواصل معنا</h4>
                     <ul class="space-y-3">
-                        <li class="font-cairo text-gray-400"><span dir="ltr">+966 50 000 0000</span></li>
-                        <li class="font-cairo text-gray-400"><span dir="ltr">info@tamm-gifts.com</span></li>
-                        <li class="font-cairo text-gray-400">الرياض، المملكة العربية السعودية</li>
-                        <li class="font-cairo text-gray-400">السبت - الخميس: ٩ ص - ٦ م</li>
+                        <li class="font-cairo text-brand-gray/75"><span dir="ltr">+966 50 000 0000</span></li>
+                        <li class="font-cairo text-brand-gray/75"><a href="mailto:info@tammgroup.sa" class="hover:text-teal transition-colors"><span dir="ltr">info@tammgroup.sa</span></a></li>
+                        <li class="font-cairo text-brand-gray/75">الرياض، المملكة العربية السعودية</li>
+                        <li class="font-cairo text-brand-gray/75">السبت - الخميس: ٩ ص - ٦ م</li>
                     </ul>
                 </div>
 
@@ -603,8 +603,8 @@
 
             <!-- Bottom Bar -->
             <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <p class="font-cairo text-gray-500 text-sm">© ٢٠٢٦ تـم للهدايا الدعائية. جميع الحقوق محفوظة.</p>
-                <a href="#home" class="font-cairo text-gray-500 hover:text-orange text-sm transition-colors flex items-center gap-2">
+                <p class="font-cairo text-brand-gray/60 text-sm">© ٢٠٢٦ تـم للهدايا الدعائية. جميع الحقوق محفوظة.</p>
+                <a href="#home" class="font-cairo text-brand-gray/60 hover:text-teal text-sm transition-colors flex items-center gap-2">
                     العودة للأعلى
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
                 </a>
@@ -671,11 +671,11 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     navLinks.forEach(link => {
-                        link.classList.remove('text-orange');
+                        link.classList.remove('text-teal');
                     });
                     const activeLink = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
                     if (activeLink) {
-                        activeLink.classList.add('text-orange');
+                        activeLink.classList.add('text-teal');
                     }
                 }
             });
